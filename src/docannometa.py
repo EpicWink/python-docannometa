@@ -11,10 +11,9 @@ class DocInfo:
         return f"{self.__class__.__name__}(documentation={self.documentation!r})"
 
     def __eq__(self, other) -> bool:
-        return (
-            isinstance(other, self.__class__)
-            and self.documentation == other.documentation
-        )
+        if not isinstance(other, self.__class__):
+            return NotImplemented
+        return self.documentation == other.documentation
 
     def __hash__(self) -> int:
         return hash((self.documentation,))
