@@ -16,7 +16,7 @@ class DocInfo:
         return self.documentation == other.documentation
 
     def __hash__(self) -> int:
-        return hash((self.documentation,))
+        return hash(self.documentation)
 
 
 def doc(documentation: str) -> DocInfo:
