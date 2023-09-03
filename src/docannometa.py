@@ -1,7 +1,7 @@
 """Document symbols via annotation metadata, as described by PEP 727."""
 
 
-class DocInfo:
+class Doc:
     documentation: str
 
     def __init__(self, documentation: str) -> None:
@@ -20,14 +20,10 @@ class DocInfo:
         return hash((self.documentation,))
 
 
-def doc(documentation: str) -> DocInfo:
-    return DocInfo(documentation)
-
-
 try:
-    from typing import doc, DocInfo
+    from typing import Doc
 except ImportError:
     try:
-        from typing_extensions import doc, DocInfo
+        from typing_extensions import Doc
     except ImportError:
         pass
