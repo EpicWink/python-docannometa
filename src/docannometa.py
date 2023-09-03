@@ -22,3 +22,12 @@ class DocInfo:
 
 def doc(documentation: str) -> DocInfo:
     return DocInfo(documentation)
+
+
+try:
+    from typing import doc, DocInfo
+except ImportError:
+    try:
+        from typing_extensions import doc, DocInfo
+    except ImportError:
+        pass
