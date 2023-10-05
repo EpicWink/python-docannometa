@@ -19,3 +19,13 @@ def test_annotations() -> None:
             str, docannometa.Doc("Result string of length `n * len(text)`")
         ],
     }
+
+    assert repeat.__annotations__["text"].__metadata__[0].documentation == (
+        "String to repeat"
+    )
+    assert repeat.__annotations__["n"].__metadata__[0].documentation == (
+        "Number of times to repeat"
+    )
+    assert repeat.__annotations__["return"].__metadata__[0].documentation == (
+        "Result string of length `n * len(text)`"
+    )
