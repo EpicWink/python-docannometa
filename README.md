@@ -3,9 +3,9 @@
 Document symbols via annotation metadata, as described by
 [PEP 727](https://peps.python.org/pep-0727/).
 
-This will become an alias to the same functionality in
-[`typing_extensions`](https://pypi.org/project/typing-extensions/) if and when it is
-implemented.
+This aliases the same functionality in
+[`typing_extensions`](https://pypi.org/project/typing-extensions/) if a sufficient
+version is installed.
 
 ## Installation
 
