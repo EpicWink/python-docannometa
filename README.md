@@ -18,12 +18,12 @@ pip install docannometa
 ```python
 from typing import Annotated
 
-from docannometa import doc
+from docannometa import Doc
 
 def repeat(
-    text: Annotated[str, doc("String to repeat")],
-    n: Annotated[int, doc("Number of times to repeat")],
-) -> Annotated[str, doc("Result string of length `n * len(text)`")]:
+    text: Annotated[str, Doc("String to repeat")],
+    n: Annotated[int, Doc("Number of times to repeat")],
+) -> Annotated[str, Doc("Result string of length `n * len(text)`")]:
     """Repeat a string multiple times then concatenate."""
     return text * n
 ```
